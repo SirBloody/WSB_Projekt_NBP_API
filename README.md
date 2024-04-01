@@ -53,14 +53,14 @@ Główna funkcja to funkcja get_rates(selected_date, currency, amount, attempt=0
 
   Wychwytywane są dwa wyjątki:
   
-  HTTPStatusError w przypadku gdyby użytkownik trafił na datę, w której nie ma odczytu kursu
-  W tym przypadku została użyta funkcja warunkowa if else.
-  Została użyta zmienna attempt w celu zapobiegnięciu pętli rekurencyjnej (np. jeśli użytkownik wybierze datę z poprzedniego wieku, program zapętliłby się, gdyż sprawdza dni poprzedzające wybraną datę)
-  Definiowana jest zmienna prev_date za pomocą modułu datetime oraz timedelta
-  Ponownie wywoływana jest funkcja get_rates lecz selected_date jest zastępowane prev_date oraz do zmiennej attempt jest dodwane 1)
-  Pętla zakończy się jęsli data zostanie znaleziona w przeciwnym wypadku zostanie zastosowana instrukcja else czyli komunikat iż nie udało znaleźć się kursów w zadanej dacie ani pobliskich datach
+  -HTTPStatusError w przypadku gdyby użytkownik trafił na datę, w której nie ma odczytu kursu
+    W tym przypadku została użyta funkcja warunkowa if else.
+    Została użyta zmienna attempt w celu zapobiegnięciu pętli rekurencyjnej (np. jeśli użytkownik wybierze datę z poprzedniego wieku, program zapętliłby się, gdyż sprawdza dni poprzedzające wybraną datę)
+    Definiowana jest zmienna prev_date za pomocą modułu datetime oraz timedelta
+    Ponownie wywoływana jest funkcja get_rates lecz selected_date jest zastępowane prev_date oraz do zmiennej attempt jest dodwane 1)
+    Pętla zakończy się jęsli data zostanie znaleziona w przeciwnym wypadku zostanie zastosowana instrukcja else czyli komunikat iż nie udało znaleźć się kursów w zadanej dacie ani pobliskich datach
 
-  RequestError w przypadku gdyby użytkownik nie posiadał połączenia z internetem, wyjątek zwróci komunikat iż żądanie się nie powiodło oraz proszony jest o sprawdzenie połąćzenia internetowego.
+  -RequestError w przypadku gdyby użytkownik nie posiadał połączenia z internetem, wyjątek zwróci komunikat iż żądanie się nie powiodło oraz proszony jest o sprawdzenie połąćzenia internetowego.
 
 
 
