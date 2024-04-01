@@ -1,0 +1,34 @@
+Australian Dollar
+Bulgarian Lev
+Brazilian Real
+Canadian Dollar
+Swiss Franc
+Chilean Peso
+Yuan Renminbi
+Czech Koruna
+Danish Krone
+Euro
+Pound Sterling
+Hong Kong Dollar
+Forint (Hungary)
+Rupiah (Indonesia)
+New Israeli Sheqel
+Indian Rupee
+Iceland Krona
+Yen (Japan)
+Won (South Korea)
+Mexican Peso
+Malaysian Ringgit
+Norwegian Krone
+New Zealand Dollar
+Philippine Peso
+Romanian Leu
+Russian Ruble
+Swedish Krona
+Singapore Dollar
+Baht (Thailand)
+Turkish Lira
+Hryvnia (Ukraine)
+United State Dollar
+Special Drawing Right
+Rand (South Africa)
