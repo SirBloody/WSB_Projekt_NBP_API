@@ -39,14 +39,14 @@ combo_val.set(currencies[])
 Funkcja dynamic_label(event) służy do powiązania wybranej wartości z wigedtu Combobox z wigetem label3, aby ten wyświetlał nazwę wybranej waluty (indeks danej waluty na liscie currencies odpowiada indeksowi na liście name np. currencies[9] = EUR name[9]= Euro)
 
 Główna funkcja to funkcja get_rates(selected_date, currency, amount, attempt=0)
-  Użyty został try except, ponieważ użytkownik może wybrać datę, w której odczyt kursu nie występuje, w tym przypadku program zwraca wyjątek z błędem, który musi zostać ujęty
-  Na początku sprawdzana jest wartość amount, gdyż użytkownik może jej nie wypełnić, w tym przypadku wartość amount jest ustawiana na wartość domyślną 1
-  Następnie definiowane jest url do api nbp ze zmiennymi currency oraz selected_date
-  Zmienna resp używa httpx.get(url), dzięki temu możemy zaciągnąć dane oraz przypisać je do znmiennej data
-  Użyta zostaje funkcja resp.rise_for_status(), która zwraca HTTPError jeśli on wystąpi.
-  Zmienna rate jest odpowiednikiem kursu średniego wyciągniętego z resp.json
-  Następnie czyszczony jest output_text z wigetu Text, gdyby użytkownik chciał wybrać inną walutę, okienko zostanie wyczyszczone z poprzeniego wyboru
-  Następnie wporwadzane są dane do output_text takie jak:
+Użyty został try except, ponieważ użytkownik może wybrać datę, w której odczyt kursu nie występuje, w tym przypadku program zwraca wyjątek z błędem, który musi zostać ujęty.
+Na początku sprawdzana jest wartość amount, gdyż użytkownik może jej nie wypełnić, w tym przypadku wartość amount jest ustawiana na wartość domyślną 1
+Następnie definiowane jest url do api nbp ze zmiennymi currency oraz selected_date.
+Zmienna resp używa httpx.get(url), dzięki temu możemy zaciągnąć dane oraz przypisać je do znmiennej data.
+Użyta zostaje funkcja resp.rise_for_status(), która zwraca HTTPError jeśli on wystąpi.
+Zmienna rate jest odpowiednikiem kursu średniego wyciągniętego z resp.json.
+Następnie czyszczony jest output_text z wigetu Text, gdyby użytkownik chciał wybrać inną walutę, okienko zostanie wyczyszczone z poprzeniego wyboru.
+  Następnie wporwadzane są dane do wigetu output_text takie jak:
     - Kurs wymiany zadanej waluty do złotówki (1 do 1)
     - Data z której kurs został zaczytany
     - Przeliczenie podanej ilość walut obcych na złotówki (np. 100 EUR = xxx PLN)
