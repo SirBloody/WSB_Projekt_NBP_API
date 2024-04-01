@@ -48,7 +48,7 @@ Następnie definiowane jest url do api nbp ze zmiennymi currency oraz selected_d
 
 Zmienna resp używa httpx.get(url), dzięki temu możemy zaciągnąć dane oraz przypisać je do znmiennej data.
 
-Użyta zostaje funkcja resp.rise_for_status(), która zwraca HTTPError jeśli on wystąpi.
+Użyta zostaje funkcja resp.rise_for_status(), która zwraca HTTPError jeśli ten wystąpi.
 
 Zmienna rate jest odpowiednikiem kursu średniego wyciągniętego z resp.json.
 
