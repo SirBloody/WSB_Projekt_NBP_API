@@ -83,7 +83,7 @@ Tworzona jest zmienna validate, która ma przypisaną funkcję sprawdzającą z 
 
 Następnie są definiowane wigety:
 
-  - cal - wiget Calendar : Dodaje do okienka graficzny kalendarz, z którego użytkownik wybiera datę z której chce sprawdzić kurs, użyte zostały takie parametry jak selectmode date_pattern oraz maxdate
+  - cal - wiget Calendar : Dodaje do okienka graficzny kalendarz, z którego użytkownik wybiera datę z której chce sprawdzić kurs, użyte zostały takie parametry jak selectmode w celu określenia jaki zakres ma być wybierany, w tym przypadku 'days', date_pattern w celu ustalenia formatu daty oraz maxdate w celu zapobiegnięciu wybierania dat z przyszłości
   - label1 label2 label3 : wiget Label: Dodaje do okienka etykietę z napisem, oprócz parametru text= dodany jest również parametr font= który pozwala nam na zastosowanie wcześniej zdefiniowanej czcionki, label3 jest zawarty w funkcji dynamic_label za pomocą label3.config(text=)
   - entry - wiget Entry : Dodaje do okienka pole do wprowadzenia danych użytkownika, wykorzystywana jest tutaj zmienna input_var w parametrze textvariable, dodatkowo zastosowany został parametr validate który ma sprawdzać kliawisze oraz validatecommand do którego przypisujemy wcześniej zdefiniowane validate
     oraz parametr %P który reprezentuje nową wartość wpisu po bieżacej edycji
