@@ -45,10 +45,15 @@ Użyty został try except, ponieważ użytkownik może wybrać datę, w której 
 Na początku sprawdzana jest wartość amount, gdyż użytkownik może jej nie wypełnić, w tym przypadku wartość amount jest ustawiana na wartość domyślną 1
 
 Następnie definiowane jest url do api nbp ze zmiennymi currency oraz selected_date.
+
 Zmienna resp używa httpx.get(url), dzięki temu możemy zaciągnąć dane oraz przypisać je do znmiennej data.
+
 Użyta zostaje funkcja resp.rise_for_status(), która zwraca HTTPError jeśli on wystąpi.
+
 Zmienna rate jest odpowiednikiem kursu średniego wyciągniętego z resp.json.
+
 Następnie czyszczony jest output_text z wigetu Text, gdyby użytkownik chciał wybrać inną walutę, okienko zostanie wyczyszczone z poprzeniego wyboru.
+
   Następnie wporwadzane są dane do wigetu output_text takie jak:
     - Kurs wymiany zadanej waluty do złotówki (1 do 1)
     - Data z której kurs został zaczytany
@@ -57,13 +62,18 @@ Następnie czyszczony jest output_text z wigetu Text, gdyby użytkownik chciał 
   Wychwytywane są dwa wyjątki:
   
   -HTTPStatusError w przypadku gdyby użytkownik trafił na datę, w której nie ma odczytu kursu
-    W tym przypadku została użyta funkcja warunkowa if else.
-    Została użyta zmienna attempt w celu zapobiegnięciu pętli rekurencyjnej (np. jeśli użytkownik wybierze datę z poprzedniego wieku, program zapętliłby się, gdyż sprawdza      dni poprzedzające wybraną datę)
-    Definiowana jest zmienna prev_date za pomocą modułu datetime oraz timedelta
-    Ponownie wywoływana jest funkcja get_rates lecz selected_date jest zastępowane prev_date oraz do zmiennej attempt jest dodwane 1)
-    Pętla zakończy się jęsli data zostanie znaleziona w przeciwnym wypadku zostanie zastosowana instrukcja else czyli komunikat iż nie udało znaleźć się kursów w zadanej        dacie ani pobliskich datach
+    
+  W tym przypadku została użyta funkcja warunkowa if else.
+    
+  Została użyta zmienna attempt w celu zapobiegnięciu pętli rekurencyjnej (np. jeśli użytkownik wybierze datę z poprzedniego wieku, program zapętliłby się, gdyż sprawdza     dni poprzedzające wybraną datę)
+    
+  Definiowana jest zmienna prev_date za pomocą modułu datetime oraz timedelta
+    
+  Ponownie wywoływana jest funkcja get_rates lecz selected_date jest zastępowane prev_date oraz do zmiennej attempt jest dodwane 1)
+    
+  Pętla zakończy się jęsli data zostanie znaleziona w przeciwnym wypadku zostanie zastosowana instrukcja else czyli komunikat iż nie udało znaleźć się kursów w zadanej       dacie ani pobliskich datach
 
-  -RequestError w przypadku gdyby użytkownik nie posiadał połączenia z internetem, wyjątek zwróci komunikat iż żądanie się nie powiodło oraz proszony jest o sprawdzenie połąćzenia internetowego.
+  -RequestError w przypadku gdyby użytkownik nie posiadał połączenia z internetem, wyjątek zwróci komunikat iż żądanie się nie powiodło oraz proszony jest o sprawdzenie       połączenia internetowego.
 
 
 
@@ -83,7 +93,8 @@ Następnie są definiowane wigety:
 
   Do każdego wigetu został zastosowany grid, dzięki któremu można ustawić odpowiednio wigetu za pomocą parametrów row= column= padx= pady=
   
-Przypisana zostaje funkcja z modułu prevents do wigetu output_text, która ma na celu zapobiegnięcie usuwania tekstu z okienka output
-Przypisana zostaje funkcja dynamic_label do wigetu combo_box, która ma za zadanie zmianę label3 po zmianie wyboru z listy wigetu combo_box
+Przypisana zostaje funkcja z modułu prevents do wigetu output_text, która ma na celu zapobiegnięcie usuwania tekstu z okienka output.
+
+Przypisana zostaje funkcja dynamic_label do wigetu combo_box, która ma za zadanie zmianę label3 po zmianie wyboru z listy wigetu combo_box.
   
   
