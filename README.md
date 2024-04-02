@@ -15,6 +15,8 @@ Do działania aplikacji niezbędne są biblioteki:
 - tkcalendar
 - httpx
 
+Plik requirements.txt został utworzony za pomocą komendy pip3 freeze > requirements.txt
+Za pomocą pip install -r .\requirements.txt szybko można zainstalować wymagane biblioteki
 
 Moduł app.py służy do uruchomienia aplikacji, iniciuje on za pomocą biblioteki Tkinter interfejs okienkowy.
 
