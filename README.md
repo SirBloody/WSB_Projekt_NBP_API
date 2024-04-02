@@ -9,9 +9,10 @@ Projekt składa się z 3 modułów oraz 2 plików źródłowych ze znakami walut
 - currencies.txt
 - currency_name.txt
 
-Do działania aplikacji niezbędne są:
+Do działania aplikacji niezbędne są biblioteki:
 
 - tkinter
+- tkcalendar
 - httpx
 
 
