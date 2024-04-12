@@ -1,7 +1,7 @@
 
 def import_currencies():
 
-    with open('C:/Users/Pablo/Desktop/AIOZZ/output.txt', 'r') as file:
+    with open('currencies.txt', 'r') as file:
         # Read lines from the file and remove leading/trailing whitespace
         list_from_file = [line.strip() for line in file.readlines()]
         return list_from_file
