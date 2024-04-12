@@ -13,7 +13,7 @@ root.resizable(False, False)
 root.title("Convert currency to Polish zloty")
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-window_width = int(screen_width * 0.25)
+window_width = 700
 window_height = 700
 large_font = font.Font(family="Helvetica", size=16)
 
