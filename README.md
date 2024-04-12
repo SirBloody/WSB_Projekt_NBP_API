@@ -23,7 +23,7 @@ Moduł app.py służy do uruchomienia aplikacji, iniciuje on za pomocą bibliote
 Rozmiaru okienka nie można zmieniać dzięki flagą False w root.resizable
 Okienko wyświetla się zawsze na środku ekranu dzięki zaczytaniu parametrów ekranu za pomocą root.winfo
 
-Szerokość okienka jest zawsze 1/4 szerokości wyświetlacza, a wyskokość ustawiona na stałe na 700px
+Szerokość oraz wysokość okienka jest ustawiona na stałą wartość 700px.
 
 Dodana została duża czcionka large_font za pomocą modułu font.py z biblioteki tkinter
 
