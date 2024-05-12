@@ -30,11 +30,10 @@ today = date.today()
 
 
 #Import currencies
-currencies = import_from_file_to_list.import_currencies()
+currencies = import_from_file_to_list.import_data('currencies.txt')
 
 #Import currencies names
-name = import_from_file_to_list.import_currencies_names()
-
+name = import_from_file_to_list.import_data('currency_name.txt')
 
 
 
