@@ -1,16 +1,7 @@
 
-def import_currencies():
-
-    with open('currencies.txt', 'r') as file:
-        # Read lines from the file and remove leading/trailing whitespace
-        list_from_file = [line.strip() for line in file.readlines()]
-        return list_from_file
-def import_currencies_names():
-
-    with open('currency_name.txt', 'r') as file:
-        name = [line.strip() for line in file.readlines()]
-        return name
-
+def import_data(filepath: str) -> list[str]:
+    with open(filepath) as file:
+        return [line.strip() for line in file.readlines()]
 
 
 
