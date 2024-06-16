@@ -29,7 +29,7 @@ Dodana została duża czcionka large_font za pomocą modułu font.py z bibliotek
 
 Definiowana jest dzisiejsza data today za pomocą modułu date z biblioteki datetime, służy ona do zapobiegania wybrania daty z przyszłości podczas przeliczania kursów
 
-Później za pomocą modułu import_from_file_to_list.py w którym znajdują się funkcje do przetworzenia plików tekstowych na listy, importowane są waluty oraz ich nazwy.
+Później za pomocą modułu import_from_file_to_list.py w którym znajduje się funkcja do przetworzenia plików tekstowych na listy, importowane są waluty oraz ich nazwy.
 -lista currencies
 -lista name
 
