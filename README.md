@@ -1,10 +1,11 @@
 # WSB_Projekt_NBP_API
 
-Projekt składa się z 3 modułów oraz 2 plików źródłowych ze znakami walut oraz ich nazwami
+Projekt składa się z 4 modułów oraz 2 plików źródłowych ze znakami walut oraz ich nazwami
 
-- app.py
+- Application.py
 - import_from_file_to_list.py
 - prevents.py
+- get_rates.py
 
 - currencies.txt
 - currency_name.txt
