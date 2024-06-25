@@ -16,6 +16,8 @@ Do działania aplikacji niezbędne są biblioteki:
 - tkcalendar
 - httpx
 
+OUTDATED!
+
 Plik requirements.txt został utworzony za pomocą komendy pip3 freeze > requirements.txt
 Za pomocą pip install -r .\requirements.txt szybko można zainstalować wymagane biblioteki
 
